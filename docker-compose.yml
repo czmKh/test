@@ -1,0 +1,9 @@
+version: '3'
+services:
+
+  web:
+    build: ./web
+    environment:
+      - APACHE_RUN_USER=www-data
+    volumes:
+      - ${APP_PATH_HOST}:${APP_PATH_CONTAINER}
